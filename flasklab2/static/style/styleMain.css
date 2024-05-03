@@ -1,0 +1,22 @@
+path {
+stroke: #081245;
+fill: white;
+transform: scale(1);
+transform-origin: 50% 50%;
+transition:.2s;
+transform-box: fill-box;
+}
+
+path:hover{
+fill: #d7e2e9;
+transform: scale(1.1);
+transform-origin: 50% 50%;
+transition:.2s;
+text-decoration: none;
+cursor: pointer;
+filter: drop-shadow(3px 3px 3px #081245);
+}      
+
+path:active{
+fill: red;
+} 

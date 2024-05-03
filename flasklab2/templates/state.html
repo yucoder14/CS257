@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h2> You've clicked on {{state}}</h2>
+
+<p>
+<h3>Some cities in {{state}}</h3>
+
+<ol></ol>
+</p> 
+
+
+<a href='/'>Back to Main</a>
+
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script>
+
+function statePopulation(city,population) {
+	return city + " has population of " + population; 
+}
+
+const parsed = d3.csv.parse("{{cities}}");
+console.log(parsed);
+d3.select('ol').selectAll('li')
+	.data(parsed)
+	.enter()
+	.append('li')
+	.text(data => statePopulation(data.city,data.population));
+
+</script>
+</body> 
+
+</html>
