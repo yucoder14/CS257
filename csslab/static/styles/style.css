@@ -1,0 +1,53 @@
+:root { 
+	--slider-width: 20px; 
+	--knob-size: 60px; 
+	--knob-border: 4px; 
+}
+
+.container {
+//border: 1px dashed lime; 
+	display: block; 
+	position: relative; 
+	margin-top: 50px; 
+	height: 300px; 
+	display: flex; 
+	justify-content: space-around;
+}
+
+.colormat {
+	position: relative; 
+	top: 2.5%;
+	height: 95%; 
+	width: 95%;
+//border: 1px dashed pink;
+}
+
+h1 { 
+	text-align: center;
+}
+
+.slider {
+	//border: 1px solid hotpink; 
+	background: gray;
+	position: relative;
+	display: inline-block;
+	height: 100%; 
+	width: var(--slider-width);
+}
+
+.knob {
+	border: 1px solid cyan;
+	Background: cyan;
+	position: absolute; 
+	top: 0;
+	left: calc(-1 * var(--knob-size)/2 + var(--slider-width)/2);
+	width: var(--knob-size);
+	height: var(--knob-size);
+	cursor: pointer; 
+}
+
+.knob::before{
+	display: block; 
+	content: attr(data-value); 
+	color: cyan;
+}

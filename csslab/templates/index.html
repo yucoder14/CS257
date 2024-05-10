@@ -1,0 +1,28 @@
+<!DOCTYPE HTML> 
+<html>
+	<head>
+		<link rel="stylesheet" href="static/styles/style.css">
+	</head> 
+	<body>
+		<h1> CSS Color Sliders </h1>
+		<div class="container"> 
+			<div class="slider" id="red">
+				<div class="knob" scale=255></div> 
+			</div> 
+			<div class="slider" id="green">
+				<div class="knob" scale=255></div> 
+			</div> 
+			<div class="slider" id="blue">
+				<div class="knob" scale=255></div> 
+			</div> 
+			<div class="slider" id="opacity">
+				<div class="knob" scale=1></div> 
+			</div> 
+		</div>
+		<h1 id="rgba"> rgba(<span id="redvalue"></span>, <span id="greenvalue"></span>, <span id="bluevalue"></span>, <span id="opacityvalue"></span>) </h1>
+		<div class="container">
+			<div class="colormat"></div> 
+		</div>
+	<script src="{{url_for('static', filename='scripts/slider.js')}}"></script>
+	</body>
+</html> 
